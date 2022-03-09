@@ -8,7 +8,7 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('home_title'.tr),
+        title: Obx(() => Text(controller.tituloQueVemDaIntroPage.value)),
         centerTitle: false,
         actions: [
           TextButton(

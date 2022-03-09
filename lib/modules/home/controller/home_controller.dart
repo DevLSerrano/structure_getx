@@ -5,6 +5,7 @@ import 'package:structure_getx/resources/repository/i_home_repository.dart';
 // com estados como Loading, Success, error.
 class HomeController extends GetxController with StateMixin<List<int>> {
   final count = 0.obs; //.obs torna a varialve observavel para o getx
+  final tituloQueVemDaIntroPage = ''.obs;
 
   final IHomeRepository homeRepository;
   HomeController({required this.homeRepository});
@@ -23,6 +24,7 @@ class HomeController extends GetxController with StateMixin<List<int>> {
 
   @override
   void onInit() {
+    tituloQueVemDaIntroPage.value = Get.arguments;
     buscarListaDeValores();
     super.onInit();
   }
